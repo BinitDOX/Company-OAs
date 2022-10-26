@@ -15,7 +15,7 @@ company getting highest and company getting lowest. This number should be minimu
   6 10 13 2
 
   output
-  5
+  5 
   1
 
 https://practice.geeksforgeeks.org/problems/the-painters-partition-problem1535/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
