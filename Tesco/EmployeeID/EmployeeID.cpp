@@ -14,24 +14,18 @@ So the output should be 3(3rd employee)
 #include<bits/stdc++.h>
 using namespace std;
 
-int solve(int n){
-    if(n < 4)
-        return n-1;
-
-    int count = 0;
-    vector<bool> sieve(n+1);
-
-    for(int i=2; i<n+1; i++){
-        if(sieve[i])
-            continue;
-        
-        if(i*2 >= n+1)
-            count++;
-
-        for(int j=i; j*i<n+1; j++)
-            sieve[i*j] = true;
+void solve(int n, int id){
+    vector<int> ans;
+    for(int d=0; d<=n; d++){
+        int tid = id - d*5000 - d*(d+1)/2 - 5000; 
+        if(tid < 0)
+            break;
+        if(tid <= n)
+            ans.push_back(tid);
     }
-    return count+1;
+
+    for(auto &x : ans)
+        cout<<x<<endl;
 }
 
 int main(){
@@ -39,10 +33,10 @@ int main(){
     cin>>t;
 
     while(t--){
-        int n;
-        cin>>n;
+        int n, id;
+        cin>>n>>id;
 
-        cout<<solve(n)<<endl;
+        solve(n, id);
     }
 
     return 0; 
