@@ -46,3 +46,56 @@ int main(){
 
     return 0; 
 }
+
+
+
+
+
+
+
+
+// Alternate:
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// int main(){
+//    int n,k;
+//    cin>>n>>k;
+//    vector<int>warehouse(k);
+//    int mp[n]={0};
+//    for(int i=0;i<k;i++){
+//       cin>>warehouse[i];
+//       mp[warehouse[i]]++;
+//    }
+//    int edge;
+//    cin>>edge;
+//    int A[n+1][n+1];
+//    for(int i=0;i<n;i++){
+//       for(int j=0;j<n;j++){
+//          A[i][j]=1e9;
+//       }
+//       A[i][i] = 0;
+//    }
+//    int a,b,c;
+//    for(int i=0;i<edge;i++){
+//       cin>>a>>b>>c;
+//       A[a][b]=c;
+//       A[b][a]=c;
+//    }
+//    int ans = 1e9;
+//    for(int k=0;k<n;k++){
+//       for(int i=0;i<n;i++){
+//          for(int j=0;j<n;j++){
+//             if(A[i][k] + A[k][j] < A[i][j]){
+//                A[i][j] = A[i][k] + A[k][j];
+//             }
+//             if(i!=j and mp[i]==1 and mp[j]==1){
+//                ans = min(ans, A[i][j]);
+//             }
+//          }
+//       }
+//    }
+// if(ans==1e9)
+//      ans=0;
+//    cout<<ans<<endl;
+// }
